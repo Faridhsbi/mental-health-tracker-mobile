@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
         // Warna latar belakang AppBar diambil dari skema warna tema aplikasi.
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-            // Masukkan drawer sebagai parameter nilai drawer dari widget Scaffold
+      // Masukkan drawer sebagai parameter nilai drawer dari widget Scaffold
       drawer: const LeftDrawer(),
       // Body halaman dengan padding di sekelilingnya.
       body: Padding(
