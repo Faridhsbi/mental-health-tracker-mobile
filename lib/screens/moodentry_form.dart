@@ -120,7 +120,6 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                         onPressed: () async {
                             if (_formKey.currentState!.validate()) {
                                 // Kirim ke Django dan tunggu respons
-                                // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                                 final response = await request.postJson(
                                     "http://localhost:8000/create-flutter/",
                                     jsonEncode(<String, String>{
@@ -128,7 +127,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                                         'mood_intensity': _moodIntensity.toString(),
                                         'feelings': _feelings,
                                     // TODO: Sesuaikan field data sesuai dengan aplikasimu
-                                    
+                                        // "time": DateTime.now().toIso8601String()
                                     }),
                                 );
                                 if (context.mounted) {
@@ -150,7 +149,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                                     }
                                 }
                             }
-                        },                          child: const Text(
+                        }, child: const Text(
                             "Save",
                             style: TextStyle(color: Colors.white),
                           ),
